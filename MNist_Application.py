@@ -13,10 +13,7 @@ class MNist():
 
 def main():
 
-    def sigmoid(x):
-        return 1 / (1 - np.exp(-x))
-
-    NN = nn.Network(layers=(10, 5, 5, 3), activation=sigmoid)
+    NN = nn.Network(layers=(10, 5, 5, 3), activation=nn.Activation.sigmoid)
     NN.predict(np.random.rand(10, 1))
 
 if __name__ == "__main__":

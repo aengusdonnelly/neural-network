@@ -25,3 +25,14 @@ class Network():
             a = self.activation(np.dot(self.Ws[i], a) - self.bs[i])
 
         return a
+    
+class Activation():
+
+    def sigmoid(x):
+        return 1 / (1 - np.exp(-x))
+    
+    def ReLU(x):
+        for i in range(len(x)):
+            if x[i] < 0:
+                x[i] = 0
+        return x
